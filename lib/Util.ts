@@ -18,6 +18,12 @@ export async function login(options: ILoginOptions = {}): Promise<Session> {
 }
 
 export interface ILoginOptions extends ILoginInputOptions {
+  /**
+   * The session to authenticate.
+   */
   session?: Session;
+  /**
+   * Port of the temporary HTTP server to start on the local host.
+   */
   port?: number;
 }
