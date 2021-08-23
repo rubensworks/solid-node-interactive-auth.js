@@ -4,7 +4,7 @@ import { interactiveLogin } from '../lib/Util';
 
 const idp = process.argv.length > 2 ? process.argv[2] : 'https://solidcommunity.net/';
 
-interactiveLogin({ oidcIssuer: idp, tokenType: 'Bearer' })
+interactiveLogin({ oidcIssuer: idp })
   .then(session => {
     console.log(`Logged in as ${session.info.webId}`);
     return session.logout();

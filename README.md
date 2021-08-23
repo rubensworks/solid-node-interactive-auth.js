@@ -49,15 +49,14 @@ $ yarn add @inrupt/solid-client-authn-node
 The following code will trigger the user's Web browser to be opened to trigger the login sequence:
 ```typescript
 import { Session } from '@inrupt/solid-client-authn-node';
-import { login } from 'solid-node-interactive-auth';
+import { interactiveLogin } from 'solid-node-interactive-auth';
 
 (async function() {
   // Create a new session and log in by opening the Web browser
   const session = new Session();
-  await login({
+  await interactiveLogin({
     session,
     oidcIssuer: 'https://solidcommunity.net/',
-    tokenType: 'Bearer',
   });
 
   // Perform operations with this session
@@ -71,9 +70,8 @@ import { login } from 'solid-node-interactive-auth';
 If you don't have any specific needs for the `Session` object,
 you can also just let this tool create one for you:
 ```typescript
-const session = await login({
+const session = await interactiveLogin({
   oidcIssuer: 'https://solidcommunity.net/',
-  tokenType: 'Bearer',
 });
 ```
 
