@@ -18,6 +18,8 @@ you can run this command:
 
 ```bash
 $ npx solid-node-interactive-auth https://solidcommunity.net/
+
+Logged in as https://<MY USERNAME>.solidcommunity.net/profile/card#me
 ```
 
 You can replace https://solidcommunity.net/ with the identity provider you want to authenticate with.
