@@ -15,6 +15,9 @@
   "bugs": {
     "url": "https://github.com/rubensworks/solid-node-interactive-auth.js/issues"
   },
+  "bin": {
+    "solid-node-interactive-auth": "bin/solid-node-interactive-auth"
+  },
   "homepage": "https://github.com/rubensworks/solid-node-interactive-auth.js#readme",
   "license": "MIT",
   "files": [
