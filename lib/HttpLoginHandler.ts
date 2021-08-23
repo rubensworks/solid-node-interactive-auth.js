@@ -3,7 +3,7 @@ import type { Server } from 'http';
 import type * as net from 'net';
 import type { ILoginInputOptions } from '@inrupt/solid-client-authn-core';
 import type { Session } from '@inrupt/solid-client-authn-node';
-import open = require('open');
+import * as open from 'open';
 
 /**
  * Handles the Solid login process by starting a temporary HTTP server.
@@ -25,7 +25,7 @@ export class HttpLoginHandler {
     // Determine login options
     options.redirectUrl = `http://localhost:${this.port}/onLoggedIn`;
     if (!options.clientName) {
-      options.clientName = 'solid-client-authn-node-login-handler.js';
+      options.clientName = '@rubensworks/solid-node-auth-helper';
     }
     if (!options.handleRedirect) {
       options.handleRedirect = redirectUrl => open(redirectUrl);
@@ -39,6 +39,7 @@ export class HttpLoginHandler {
         if (req.url!.startsWith('/onLoggedIn')) {
           this.session.handleIncomingRedirect(`http://localhost:${this.port}${req.url}`)
             .then(resolve, reject);
+          res.writeHead(200);
           res.end(`<script>window.close();</script>`);
         } else {
           res.writeHead(404);
