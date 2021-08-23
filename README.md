@@ -1,4 +1,4 @@
-# Helper for Solid authentication in Node.js
+# Interactive Solid authentication in Node.js
 
 [![Build status](https://github.com/rubensworks/solid-node-interactive-auth.js/workflows/CI/badge.svg)](https://github.com/rubensworks/solid-node-interactive-auth.js/actions?query=workflow%3ACI)
 [![Coverage Status](https://coveralls.io/repos/github/rubensworks/solid-node-interactive-auth.js/badge.svg?branch=master)](https://coveralls.io/github/rubensworks/solid-node-interactive-auth.js?branch=master)
