@@ -3,10 +3,10 @@ import { Session } from '@inrupt/solid-client-authn-node';
 import { HttpLoginHandler } from './HttpLoginHandler';
 
 /**
- * Login to an existing or new session.
+ * Login to an existing or new session by opening the user's Web browser.
  * @param options Login options.
  */
-export async function login(options: ILoginOptions = {}): Promise<Session> {
+export async function interactiveLogin(options: ILoginOptions = {}): Promise<Session> {
   const session = options.session || new Session();
 
   await new HttpLoginHandler({

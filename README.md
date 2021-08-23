@@ -1,24 +1,35 @@
 # Helper for Solid authentication in Node.js
 
-[![Build status](https://github.com/rubensworks/solid-node-auth-helper.js/workflows/CI/badge.svg)](https://github.com/rubensworks/solid-node-auth-helper.js/actions?query=workflow%3ACI)
-[![Coverage Status](https://coveralls.io/repos/github/rubensworks/solid-node-auth-helper.js/badge.svg?branch=master)](https://coveralls.io/github/rubensworks/solid-node-auth-helper.js?branch=master)
-[![npm version](https://badge.fury.io/js/@rubensworks/solid-node-auth-helper.svg)](https://www.npmjs.com/package/@rubensworks/solid-node-auth-helper)
+[![Build status](https://github.com/rubensworks/solid-node-interactive-auth.js/workflows/CI/badge.svg)](https://github.com/rubensworks/solid-node-interactive-auth.js/actions?query=workflow%3ACI)
+[![Coverage Status](https://coveralls.io/repos/github/rubensworks/solid-node-interactive-auth.js/badge.svg?branch=master)](https://coveralls.io/github/rubensworks/solid-node-interactive-auth.js?branch=master)
+[![npm version](https://badge.fury.io/js/solid-node-interactive-auth.svg)](https://www.npmjs.com/package/solid-node-interactive-auth)
 
 Easily authenticate Node.js apps with Solid identity servers by opening the user's Web browser.
 
 Internally, this tool will setup a temporary Web server on the localhost
 to allow authentication data to be handled easily and safely.
 
-This is to be used as a companyon tool next to [`@inrupt/solid-client-authn-node`](https://www.npmjs.com/package/@inrupt/solid-client-authn-node).
+This is to be used as a tool next to [`@inrupt/solid-client-authn-node`](https://www.npmjs.com/package/@inrupt/solid-client-authn-node).
+
+## Try out how it works
+
+To see how the interactive authentication works for the end-user,
+you can run this command:
+
+```bash
+$ npx solid-node-interactive-auth https://solidcommunity.net/
+```
+
+You can replace https://solidcommunity.net/ with the identity provider you want to authenticate with.
 
 ## Installation
 
 ```bash
-$ npm install @rubensworks/solid-node-auth-helper
+$ npm install solid-node-interactive-auth
 ```
 or
 ```bash
-$ yarn add @rubensworks/solid-node-auth-helper
+$ yarn add solid-node-interactive-auth
 ```
 
 This tool requires [`@inrupt/solid-client-authn-node`](https://www.npmjs.com/package/@inrupt/solid-client-authn-node) as a peer dependency:
@@ -36,7 +47,7 @@ $ yarn add @inrupt/solid-client-authn-node
 The following code will trigger the user's Web browser to be opened to trigger the login sequence:
 ```typescript
 import { Session } from '@inrupt/solid-client-authn-node';
-import { login } from '@rubensworks/solid-node-auth-helper';
+import { login } from 'solid-node-interactive-auth';
 
 (async function() {
   // Create a new session and log in by opening the Web browser

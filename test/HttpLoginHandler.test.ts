@@ -67,7 +67,7 @@ describe('HttpLoginHandler', () => {
       expect(server.listen).toHaveBeenCalledWith(3005);
 
       expect(session.login).toHaveBeenCalledWith({
-        clientName: '@rubensworks/solid-node-auth-helper',
+        clientName: '@rubensworks/solid-node-interactive-auth',
         handleRedirect: expect.any(Function),
         redirectUrl: 'http://localhost:3005/onLoggedIn',
       });

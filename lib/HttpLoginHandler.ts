@@ -25,7 +25,7 @@ export class HttpLoginHandler {
     // Determine login options
     options.redirectUrl = `http://localhost:${this.port}/onLoggedIn`;
     if (!options.clientName) {
-      options.clientName = '@rubensworks/solid-node-auth-helper';
+      options.clientName = '@rubensworks/solid-node-interactive-auth';
     }
     if (!options.handleRedirect) {
       options.handleRedirect = redirectUrl => open(redirectUrl);

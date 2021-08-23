@@ -1,7 +1,7 @@
 {
-  "name": "@rubensworks/solid-node-auth-helper",
+  "name": "solid-node-interactive-auth",
   "version": "1.0.0",
-  "description": "Easily authenticate Node.js apps with Solid identity servers by setting up a temporary local HTTP server",
+  "description": "Easily authenticate Node.js apps with Solid identity servers by opening the user's Web browser",
   "keywords": [
     "solid",
     "identity",
@@ -10,19 +10,19 @@
   ],
   "main": "index.js",
   "typings": "index",
-  "repository": "git@github.com:rubensworks/solid-node-auth-helper.js.git",
+  "repository": "git@github.com:rubensworks/solid-node-interactive-auth.js.git",
   "author": "Ruben Taelman <rubensworks@gmail.com>",
   "bugs": {
-    "url": "https://github.com/rubensworks/solid-node-auth-helper.js/issues"
+    "url": "https://github.com/rubensworks/solid-node-interactive-auth.js/issues"
   },
-  "homepage": "https://github.com/rubensworks/solid-node-auth-helper.js#readme",
+  "homepage": "https://github.com/rubensworks/solid-node-interactive-auth.js#readme",
   "license": "MIT",
   "files": [
     "lib/**/*.d.ts",
     "lib/**/*.js",
     "bin/**/*.d.ts",
     "bin/**/*.js",
-    "bin/solid-node-auth-helper",
+    "bin/solid-node-interactive-auth",
     "index.d.ts",
     "index.js"
   ],
