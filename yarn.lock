@@ -353,19 +353,19 @@
   resolved "https://registry.yarnpkg.com/@hutson/parse-repository-url/-/parse-repository-url-3.0.2.tgz#98c23c950a3d9b6c8f0daed06da6c3af06981340"
   integrity sha512-H9XAx3hc0BQHY6l+IFSWHDySypcXsvsuLhgYLUGywmJ5pswRVQJUHpOsobnLYp2ZUaUlKiKDrgWWhosOwAEM8Q==
 
-"@inrupt/jose-legacy-modules@0.0.3-3.14.3":
-  version "0.0.3-3.14.3"
-  resolved "https://registry.yarnpkg.com/@inrupt/jose-legacy-modules/-/jose-legacy-modules-0.0.3-3.14.3.tgz#761f0197bf0bf5b0051ee39d72e7bd5f73a8d436"
-  integrity sha512-vo12yEC3aMkJ+w0Q6vWehC6OQrd8dWLfdgVuWtf6sEb1FkVmy35+63iNhCSozHfo953RFL33ZxHF/qdyIyYmAw==
+"@inrupt/jose-legacy-modules@0.0.3-3.14.4":
+  version "0.0.3-3.14.4"
+  resolved "https://registry.yarnpkg.com/@inrupt/jose-legacy-modules/-/jose-legacy-modules-0.0.3-3.14.4.tgz#150a4c81b0adc8eb848c2b7fff948608ffbb6dd5"
+  integrity sha512-4NySRypv8xgFCEySMFS69joM/4cKxi8V089ImH7zAOwcANV5KJ67VHl25RHAdALZH3DfU20UvwtTkUfcIAlAmg==
   dependencies:
-    jose "3.14.3"
+    jose "3.14.4"
 
-"@inrupt/solid-client-authn-core@^1.11.0":
-  version "1.11.0"
-  resolved "https://registry.yarnpkg.com/@inrupt/solid-client-authn-core/-/solid-client-authn-core-1.11.0.tgz#59c36f5130eb1731daf027d631ac6b57e6e68d75"
-  integrity sha512-qmEEkiNnhiM7rE474I5GRapztYVZ51EF/iRzN2ldT7Jlq55kcaEdvK9ZwL288jLk4bvdEwy6k9ctebCCkTgkVw==
+"@inrupt/solid-client-authn-core@1.11.2-fixnodeproactive-refresh-1157889868-7690-1629706936.0":
+  version "1.11.2-fixnodeproactive-refresh-1157889868-7690-1629706936.0"
+  resolved "https://registry.yarnpkg.com/@inrupt/solid-client-authn-core/-/solid-client-authn-core-1.11.2-fixnodeproactive-refresh-1157889868-7690-1629706936.0.tgz#372f82b62afc90524a43ed0fd19314adcd3b433c"
+  integrity sha512-JV33cWbTWwnM3BQFy28Oq+rf88zOgI7QAvVFXm2dQiFK8EDQqIB9litLp5K4VOb6LZdSk8nrxrDbp3M5olz8hw==
   dependencies:
-    "@inrupt/jose-legacy-modules" "0.0.3-3.14.3"
+    "@inrupt/jose-legacy-modules" "0.0.3-3.14.4"
     "@inrupt/solid-common-vocab" "^1.0.0"
     "@types/lodash.clonedeep" "^4.5.6"
     "@types/uuid" "^8.3.0"
@@ -374,13 +374,13 @@
     lodash.clonedeep "^4.5.0"
     uuid "^8.3.1"
 
-"@inrupt/solid-client-authn-node@^1.11.0":
-  version "1.11.0"
-  resolved "https://registry.yarnpkg.com/@inrupt/solid-client-authn-node/-/solid-client-authn-node-1.11.0.tgz#6f1b78c8764da73ee3417f06b131aab4572fc4e7"
-  integrity sha512-wGGwt56VGg1/DTAd4ZR0o8Cia/jmOEfH/Kf0fZhHf7CTEjWWLLWV+FqozX8QIo37vSw4+M/Ni//CkektvhpfVg==
+"@inrupt/solid-client-authn-node@fixnodeproactive-refresh":
+  version "1.11.2-fixnodeproactive-refresh-1157889868-7690-1629706936.0"
+  resolved "https://registry.yarnpkg.com/@inrupt/solid-client-authn-node/-/solid-client-authn-node-1.11.2-fixnodeproactive-refresh-1157889868-7690-1629706936.0.tgz#5fbcdee0dac428c2def5aa93ed903ea0cdeede1a"
+  integrity sha512-+UX+4fj93yE++G5BOdbkvSrvcOzFKFBNrdbUSAJubFqSnbR9LzDCdqKWfknIX0Uz9SsuHbklmrfZsfMmTnAtEA==
   dependencies:
-    "@inrupt/jose-legacy-modules" "0.0.3-3.14.3"
-    "@inrupt/solid-client-authn-core" "^1.11.0"
+    "@inrupt/jose-legacy-modules" "0.0.3-3.14.4"
+    "@inrupt/solid-client-authn-core" "1.11.2-fixnodeproactive-refresh-1157889868-7690-1629706936.0"
     "@types/node" "^15.0.1"
     "@types/uuid" "^8.3.0"
     cross-fetch "^3.0.6"
@@ -3525,10 +3525,10 @@ jju@~1.4.0:
   resolved "https://registry.yarnpkg.com/jju/-/jju-1.4.0.tgz#a3abe2718af241a2b2904f84a625970f389ae32a"
   integrity sha1-o6vicYryQaKykE+EpiWXDzia4yo=
 
-jose@3.14.3:
-  version "3.14.3"
-  resolved "https://registry.yarnpkg.com/jose/-/jose-3.14.3.tgz#ea05879fb80c0a9ff0ab005269852740935539f5"
-  integrity sha512-j1vO5oWqa6LmdpiZvhkM9NYxN3EuTrmzVIqSGWtJVP6BOByujZdefZZjSFGzxmbf4GLYWaXLZMKTyVPbm00S2Q==
+jose@3.14.4:
+  version "3.14.4"
+  resolved "https://registry.yarnpkg.com/jose/-/jose-3.14.4.tgz#baddd71941acdf442584e6ad8c66074998959c62"
+  integrity sha512-MQd/SbOZM5mo1TvSytcNgSNfnM7Tyq5DBZaoGFYgMlkWDsr590Jua95RL7vLl2jvUm21zSeoVz0HOPn3/0gOug==
 
 jose@^2.0.5:
   version "2.0.5"
@@ -4991,11 +4991,6 @@ side-channel@^1.0.4:
     get-intrinsic "^1.0.2"
     object-inspect "^1.9.0"
 
-siginfo@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/siginfo/-/siginfo-2.0.0.tgz#32e76c70b79724e3bb567cb9d543eb858ccfaf30"
-  integrity sha512-ybx0WO1/8bSBLEWXZvEd7gMW3Sn3JFlW3TvX1nREbDLRNQNaeNN8WK0meBwPdAaOI7TtRRRJn/Es1zhrrCHu7g==
-
 signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.3.tgz#a1410c2edd8f077b08b4e253c8eacfcaf057461c"
@@ -5163,11 +5158,6 @@ stack-utils@^2.0.2:
   integrity sha512-gL//fkxfWUsIlFL2Tl42Cl6+HFALEaB1FU76I/Fy+oZjRreP7OPMXFlGbxM7NQsI0ZpUfw76sHnv0WNYuTb7Iw==
   dependencies:
     escape-string-regexp "^2.0.0"
-
-stackback@0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/stackback/-/stackback-0.0.2.tgz#1ac8a0d9483848d1695e418b6d031a3c3ce68e3b"
-  integrity sha1-Gsig2Ug4SNFpXkGLbQMaPDzmjjs=
 
 static-extend@^0.1.1:
   version "0.1.2"
@@ -5743,14 +5733,6 @@ which@^2.0.1, which@^2.0.2:
   integrity sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==
   dependencies:
     isexe "^2.0.0"
-
-why-is-node-running@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/why-is-node-running/-/why-is-node-running-2.2.0.tgz#fd0a73ea9303920fbb45457c6ecc392ebec90bd2"
-  integrity sha512-rxtN9D0lJaYyP92BR5yoyWecK2txBKmBIuS7GRbOPP5bXsT37/hBqcmTrlrt25DBr9p4WJb6c9LuYSJd89vHRQ==
-  dependencies:
-    siginfo "^2.0.0"
-    stackback "0.0.2"
 
 word-wrap@^1.2.3, word-wrap@~1.2.3:
   version "1.2.3"
