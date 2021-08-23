@@ -6,7 +6,10 @@
     "solid",
     "identity",
     "authenticate",
-    "login"
+    "login",
+    "interactive",
+    "node",
+    "browser"
   ],
   "main": "index.js",
   "typings": "index",
