@@ -40,6 +40,9 @@ export class HttpLoginHandler {
           this.session.handleIncomingRedirect(`http://localhost:${this.port}${req.url}`)
             .then(resolve, reject);
           res.writeHead(200);
+          res.end(`<script>window.location = new URL('http://localhost:${this.port}/done'); window.close();</script>`);
+        } else if (req.url!.startsWith('/done')) {
+          res.writeHead(200);
           res.end(`<script>window.close();</script>`);
         } else {
           res.writeHead(404);

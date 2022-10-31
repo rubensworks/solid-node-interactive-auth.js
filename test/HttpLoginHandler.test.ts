@@ -49,6 +49,10 @@ describe('HttpLoginHandler', () => {
         requestHandler({
           url: '/onLoggedIn',
         }, res);
+
+        requestHandler({
+          url: '/done',
+        }, res);
       }),
       info: {
         isLoggedIn: true,
@@ -74,7 +78,24 @@ describe('HttpLoginHandler', () => {
       expect(open).toHaveBeenCalledWith('http://example.org/authenticate');
       expect(session.handleIncomingRedirect).toHaveBeenCalledWith('http://localhost:3005/onLoggedIn');
       expect(res.writeHead).toHaveBeenCalledWith(200);
-      expect(res.end).toHaveBeenCalledWith('<script>window.close();</script>');
+      expect(res.end).toHaveBeenCalledWith(
+        '<script>window.location = new URL(\'http://localhost:3005/done\'); window.close();</script>',
+      );
+
+      expect(server.close).toHaveBeenCalledWith();
+      expect(socket.destroy).toHaveBeenCalledWith();
+
+      await open('http://localhost:3005/done');
+    });
+
+    it('handles a valid post-login sequence', async() => {
+      await handler.handleLogin({});
+
+      await open('http://localhost:3005/done');
+      expect(res.writeHead).toHaveBeenCalledWith(200);
+      expect(res.end).toHaveBeenCalledWith(
+        '<script>window.close();</script>',
+      );
 
       expect(server.close).toHaveBeenCalledWith();
       expect(socket.destroy).toHaveBeenCalledWith();
@@ -98,7 +119,9 @@ describe('HttpLoginHandler', () => {
       expect(handleRedirect).toHaveBeenCalledWith('http://example.org/authenticate');
       expect(session.handleIncomingRedirect).toHaveBeenCalledWith('http://localhost:3005/onLoggedIn');
       expect(res.writeHead).toHaveBeenCalledWith(200);
-      expect(res.end).toHaveBeenCalledWith('<script>window.close();</script>');
+      expect(res.end).toHaveBeenCalledWith(
+        '<script>window.location = new URL(\'http://localhost:3005/done\'); window.close();</script>',
+      );
 
       expect(server.close).toHaveBeenCalledWith();
       expect(socket.destroy).toHaveBeenCalledWith();
