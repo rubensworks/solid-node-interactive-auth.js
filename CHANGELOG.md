@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+<a name="v1.1.0"></a>
+## [v1.1.0](https://github.com/rubensworks/solid-node-interactive-auth.js/compare/v1.0.2...v1.1.0) - 2022-10-31
+
+### Changed
+* [Clear code param after authentication](https://github.com/rubensworks/solid-node-interactive-auth.js/commit/40603c512b7971103dcf8a8a6645948f8d5a346f)
+
 <a name="v1.0.2"></a>
 ## [v1.0.2](https://github.com/rubensworks/solid-node-interactive-auth.js/compare/v1.0.1...v1.0.2) - 2021-08-23
 
