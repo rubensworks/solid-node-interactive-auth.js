@@ -28,8 +28,11 @@
     "lib/**/*.js",
     "bin/**/*.d.ts",
     "bin/**/*.js",
+    "bin/**/*.js.map",
     "bin/solid-node-interactive-auth",
+    "lib/**/*.js.map",
     "index.d.ts",
+    "index.js.map",
     "index.js"
   ],
   "pre-commit": [
