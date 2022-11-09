@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+<a name="v1.1.1"></a>
+## [v1.1.1](https://github.com/rubensworks/solid-node-interactive-auth.js/compare/v1.1.0...v1.1.1) - 2022-11-09
+
+### Fixed
+* [Include source map files in packed files](https://github.com/rubensworks/solid-node-interactive-auth.js/commit/34498c9c8e53df945d7003dc3534da442e2efeda)
+
 <a name="v1.1.0"></a>
 ## [v1.1.0](https://github.com/rubensworks/solid-node-interactive-auth.js/compare/v1.0.2...v1.1.0) - 2022-10-31
 
