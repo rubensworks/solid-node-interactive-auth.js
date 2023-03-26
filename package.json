@@ -96,6 +96,6 @@
     "version": "manual-git-changelog onversion"
   },
   "dependencies": {
-    "open": "^8.2.1"
+    "open": "^9.0.0"
   }
 }
