@@ -1,3 +1,4 @@
+/* eslint-disable import/no-nodejs-modules -- exercises the local HTTP server */
 import type { Server, ServerResponse } from 'node:http';
 import type * as net from 'node:net';
 import type { Session } from '@inrupt/solid-client-authn-node';
@@ -6,6 +7,7 @@ import { HttpLoginHandler } from '../lib/HttpLoginHandler';
 
 let server: Server;
 let requestHandler: any;
+// eslint-disable-next-line jest/no-untyped-mock-factory -- jest.mock takes no type argument on @types/jest@27
 jest.mock('node:http', () => ({
   createServer(requestHandlerThis: any) {
     requestHandler = requestHandlerThis;
@@ -13,6 +15,7 @@ jest.mock('node:http', () => ({
   },
 }));
 
+// eslint-disable-next-line jest/no-untyped-mock-factory -- jest.mock takes no type argument on @types/jest@27
 jest.mock('open', () => jest.fn());
 
 describe('HttpLoginHandler', () => {

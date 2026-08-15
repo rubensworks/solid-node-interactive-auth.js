@@ -1,3 +1,4 @@
+/* eslint-disable import/no-nodejs-modules -- this package runs a local HTTP server to complete an interactive login */
 import * as http from 'node:http';
 import type { Server } from 'node:http';
 import type * as net from 'node:net';
