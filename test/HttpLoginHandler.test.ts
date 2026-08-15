@@ -1,12 +1,12 @@
-import type { Server, ServerResponse } from 'http';
-import type * as net from 'net';
+import type { Server, ServerResponse } from 'node:http';
+import type * as net from 'node:net';
 import type { Session } from '@inrupt/solid-client-authn-node';
 import * as open from 'open';
 import { HttpLoginHandler } from '../lib/HttpLoginHandler';
 
 let server: Server;
 let requestHandler: any;
-jest.mock('http', () => ({
+jest.mock('node:http', () => ({
   createServer(requestHandlerThis: any) {
     requestHandler = requestHandlerThis;
     return server;
@@ -140,7 +140,7 @@ describe('HttpLoginHandler', () => {
 
     it('rejects when login has failed', async() => {
       session.info.isLoggedIn = false;
-      await expect(handler.handleLogin({})).rejects.toThrowError('Login process has failed');
+      await expect(handler.handleLogin({})).rejects.toThrow('Login process has failed');
     });
   });
 });

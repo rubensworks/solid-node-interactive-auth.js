@@ -7,10 +7,10 @@ import { HttpLoginHandler } from './HttpLoginHandler';
  * @param options Login options.
  */
 export async function interactiveLogin(options: ILoginOptions = {}): Promise<Session> {
-  const session = options.session || new Session();
+  const session = options.session ?? new Session();
 
   await new HttpLoginHandler({
-    port: options.port || 3005,
+    port: options.port ?? 3005,
     session,
   }).handleLogin(options);
 
