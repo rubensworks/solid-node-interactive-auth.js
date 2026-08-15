@@ -1,18 +1,21 @@
-import type { Server, ServerResponse } from 'http';
-import type * as net from 'net';
+/* eslint-disable import/no-nodejs-modules -- exercises the local HTTP server */
+import type { Server, ServerResponse } from 'node:http';
+import type * as net from 'node:net';
 import type { Session } from '@inrupt/solid-client-authn-node';
 import * as open from 'open';
 import { HttpLoginHandler } from '../lib/HttpLoginHandler';
 
 let server: Server;
 let requestHandler: any;
-jest.mock('http', () => ({
+// eslint-disable-next-line jest/no-untyped-mock-factory -- jest.mock takes no type argument on @types/jest@27
+jest.mock('node:http', () => ({
   createServer(requestHandlerThis: any) {
     requestHandler = requestHandlerThis;
     return server;
   },
 }));
 
+// eslint-disable-next-line jest/no-untyped-mock-factory -- jest.mock takes no type argument on @types/jest@27
 jest.mock('open', () => jest.fn());
 
 describe('HttpLoginHandler', () => {
@@ -140,7 +143,7 @@ describe('HttpLoginHandler', () => {
 
     it('rejects when login has failed', async() => {
       session.info.isLoggedIn = false;
-      await expect(handler.handleLogin({})).rejects.toThrowError('Login process has failed');
+      await expect(handler.handleLogin({})).rejects.toThrow('Login process has failed');
     });
   });
 });
