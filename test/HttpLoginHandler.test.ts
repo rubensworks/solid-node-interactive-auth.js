@@ -140,7 +140,7 @@ describe('HttpLoginHandler', () => {
 
     it('rejects when login has failed', async() => {
       session.info.isLoggedIn = false;
-      await expect(handler.handleLogin({})).rejects.toThrowError('Login process has failed');
+      await expect(handler.handleLogin({})).rejects.toThrow('Login process has failed');
     });
   });
 });
