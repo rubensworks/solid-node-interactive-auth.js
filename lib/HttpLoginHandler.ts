@@ -1,6 +1,6 @@
-import * as http from 'http';
-import type { Server } from 'http';
-import type * as net from 'net';
+import * as http from 'node:http';
+import type { Server } from 'node:http';
+import type * as net from 'node:net';
 import type { ILoginInputOptions } from '@inrupt/solid-client-authn-core';
 import type { Session } from '@inrupt/solid-client-authn-node';
 import * as open from 'open';

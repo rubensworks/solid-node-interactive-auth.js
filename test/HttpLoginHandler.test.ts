@@ -1,19 +1,19 @@
-import type { Server, ServerResponse } from 'http';
-import type * as net from 'net';
+import type { Server, ServerResponse } from 'node:http';
+import type * as net from 'node:net';
 import type { Session } from '@inrupt/solid-client-authn-node';
 import * as open from 'open';
 import { HttpLoginHandler } from '../lib/HttpLoginHandler';
 
 let server: Server;
 let requestHandler: any;
-jest.mock('http', () => ({
+jest.mock<any>('node:http', () => ({
   createServer(requestHandlerThis: any) {
     requestHandler = requestHandlerThis;
     return server;
   },
 }));
 
-jest.mock('open', () => jest.fn());
+jest.mock<any>('open', () => jest.fn());
 
 describe('HttpLoginHandler', () => {
   let handler: HttpLoginHandler;
